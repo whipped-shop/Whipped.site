@@ -34,12 +34,12 @@
       padding: 40px 16px;
     }
 
-    /* ─── CARD shadow: change rgba opacity to adjust strength ─── */
+    /* ─── CARD ─── */
     .card {
-      background: var(--white);
+      background: linear-gradient(145deg, #f46a32 0%, #ec5e27 50%, #d94f1a 100%);
       border: none;
       border-radius: 28px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      box-shadow: 0 20px 60px rgba(236,94,39,0.45), 0 4px 16px rgba(0,0,0,0.1);
       padding: 56px 80px 48px;
       max-width: 720px;
       width: 100%;
@@ -56,7 +56,7 @@
       font-family: 'Noot', Georgia, serif;
       font-size: 3rem;
       font-weight: normal;
-      color: var(--orange);
+      color: #fff;
       letter-spacing: 0.02em;
       margin-bottom: 10px;
       animation: up 0.7s 0.1s cubic-bezier(0.16,1,0.3,1) both;
@@ -85,7 +85,7 @@
       font-weight: 600;
       letter-spacing: 0.24em;
       text-transform: uppercase;
-      color: var(--orange);
+      color: rgba(255,255,255,0.75);
       margin-bottom: 12px;
       animation: up 0.7s 0.3s cubic-bezier(0.16,1,0.3,1) both;
     }
@@ -94,18 +94,18 @@
       font-family: 'Poppins', sans-serif;
       font-size: 2.6rem;
       font-weight: 800;
-      color: var(--dark);
+      color: #fff;
       line-height: 1.2;
       margin-bottom: 18px;
       animation: up 0.7s 0.4s cubic-bezier(0.16,1,0.3,1) both;
     }
 
-    h1 span { color: var(--orange); }
+    h1 span { color: #fff; }
 
     p.sub {
       font-family: 'Poppins', sans-serif;
       font-size: 0.93rem;
-      color: var(--muted);
+      color: rgba(255,255,255,0.8);
       line-height: 1.7;
       font-weight: 300;
       margin: 0 auto 28px;
@@ -121,28 +121,29 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: var(--dark);
-      color: #fff;
+      background: #fff;
+      color: var(--orange);
       font-family: 'Poppins', sans-serif;
       font-size: 0.88rem;
-      font-weight: 500;
+      font-weight: 600;
       padding: 15px 32px;
       border-radius: 100px;
       text-decoration: none;
-      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
-      box-shadow: 0 6px 28px rgba(26,14,8,0.15);
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s, color 0.25s;
+      box-shadow: 0 6px 28px rgba(0,0,0,0.15);
     }
     .cta:hover {
-      background: var(--orange);
+      background: var(--dark);
+      color: #fff;
       transform: translateY(-2px);
-      box-shadow: 0 10px 36px rgba(236,94,39,0.28);
+      box-shadow: 0 10px 36px rgba(0,0,0,0.25);
     }
 
     .stay-tuned {
       display: inline-block;
       font-family: 'Noot', Georgia, serif;
       font-size: 1.1rem;
-      color: var(--orange);
+      color: rgba(255,255,255,0.9);
       letter-spacing: 0.04em;
       animation: up 0.7s 0.7s cubic-bezier(0.16,1,0.3,1) both;
     }
@@ -186,12 +187,12 @@
         <span id="cta-text">Get in Touch</span>
         <svg id="cta-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </div>
-      <a id="cta-email" class="cta" href="mailto:order.whipped@gmail.com" style="display:none; margin-top:10px;">
+      <a id="cta-email" class="cta" href="/cdn-cgi/l/email-protection#5c332e38392e722b34352c2c39381c3b313d3530723f3331" style="display:none; margin-top:10px;">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="2" y="4" width="20" height="16" rx="3"/>
           <path d="M2 7l10 7 10-7"/>
         </svg>
-        order.whipped@gmail.com
+        <span class="__cf_email__" data-cfemail="4f203d2b2a3d613827263f3f2a2b0f28222e2623612c2022">[email&#160;protected]</span>
       </a>
     </div>
 
@@ -201,11 +202,4 @@
 
   <div class="footer">© 2026 Whipped</div>
 
-  <script>
-    function revealEmail() {
-      document.getElementById('cta-btn').style.display = 'none';
-      document.getElementById('cta-email').style.display = 'inline-flex';
-    }
-  </script>
-</body>
-</html>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudfl
