@@ -179,20 +179,13 @@
     <p class="sub">For any inquiries,<br class="mob-break"> feel free to contact us via email.</p>
 
     <div class="cta-wrap">
-      <div id="cta-btn" class="cta" onclick="revealEmail()" style="cursor:pointer;">
+      <a id="cta-btn" class="cta" href="#" onclick="revealEmail(event)">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="2" y="4" width="20" height="16" rx="3"/>
           <path d="M2 7l10 7 10-7"/>
         </svg>
         <span id="cta-text">Get in Touch</span>
         <svg id="cta-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </div>
-      <a id="cta-email" class="cta" href="/cdn-cgi/l/email-protection#5c332e38392e722b34352c2c39381c3b313d3530723f3331" style="display:none; margin-top:10px;">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="4" width="20" height="16" rx="3"/>
-          <path d="M2 7l10 7 10-7"/>
-        </svg>
-        <span class="__cf_email__" data-cfemail="4f203d2b2a3d613827263f3f2a2b0f28222e2623612c2022">[email&#160;protected]</span>
       </a>
     </div>
 
@@ -202,4 +195,17 @@
 
   <div class="footer">© 2026 Whipped</div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudfl
+  <script>
+    function revealEmail(e) {
+      var btn = document.getElementById('cta-btn');
+      if (btn.dataset.revealed) return;
+      e.preventDefault();
+      document.getElementById('cta-text').textContent = 'order.whipped@gmail.com';
+      document.getElementById('cta-arrow').style.display = 'none';
+      btn.href = 'mailto:order.whipped@gmail.com';
+      btn.dataset.revealed = '1';
+    }
+  </script>
+
+</body>
+</html>
